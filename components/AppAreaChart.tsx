@@ -9,16 +9,16 @@ import {
   ChartTooltipContent,
   type ChartConfig
 } from '@/components/ui/chart';
-import { BarChart, Bar, CartesianGrid, XAxis, YAxis, AreaChart, Area } from 'recharts';
+import { CartesianGrid, XAxis, YAxis, AreaChart, Area } from 'recharts';
 
 const chartConfig = {
   desktop: {
     label: 'Desktop',
-    color: '#A6C7DA'
+    color: '#1448E7'
   },
   mobile: {
     label: 'Mobile',
-    color: '#1447E5'
+    color: '#AD46FD'
   }
 } satisfies ChartConfig;
 
@@ -41,7 +41,7 @@ export default function AppAreaChart() {
           <defs>
             <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="var(--color-desktop)" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="var(--color-desktop)" stopOpacity={0.1} />
+              <stop offset="95%" stopColor="var(--color-desktop)" stopOpacity={0.5} />
             </linearGradient>
             <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="var(--color-mobile)" stopOpacity={0.8} />

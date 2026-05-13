@@ -7,6 +7,7 @@ import AppSidebar from '@/components/AppSidebar';
 import Navbar from '@/components/Navbar';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { cookies } from 'next/headers';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
