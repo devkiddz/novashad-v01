@@ -1,7 +1,20 @@
 'use client';
 
 import React from 'react';
-import { Calendar, ChevronUp, Home, Inbox, Search, Settings, User2 } from 'lucide-react';
+import {
+  Calendar,
+  ChevronDown,
+  ChevronUp,
+  Home,
+  Inbox,
+  MoveIcon,
+  Plus,
+  Projector,
+  Scale,
+  Search,
+  Settings,
+  User2
+} from 'lucide-react';
 import {
   Sidebar,
   SidebarContent,
@@ -11,6 +24,7 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
+  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator
@@ -18,8 +32,10 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './ui/dropdown-menu';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './ui/collapsible';
 
 export default function AppSidebar() {
+  // Menu Items
   const items = [
     {
       title: 'Home',
@@ -63,8 +79,8 @@ export default function AppSidebar() {
       </SidebarHeader>
       <SidebarSeparator />
       {/* Sidebar header contents ends here */}
+      {/* First Sidebar Contents Group */}
       <SidebarContent>
-        {/* First Sidebar Contents Group */}
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -77,6 +93,9 @@ export default function AppSidebar() {
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
+                  {item.title === 'Inbox' && (
+                    <SidebarMenuBadge className="text-shadow-green-600 bg-green-900">25</SidebarMenuBadge>
+                  )}
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
@@ -84,46 +103,49 @@ export default function AppSidebar() {
         </SidebarGroup>
         {/* First Sidebar Contents Group */}
 
-        {/* First Sidebar Contents Group */}
-        <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map(item => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton>
-                    <Link href={item.url} className="flex items-center gap-2">
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-        {/* First Sidebar Contents Group */}
-        {/* First Sidebar Contents Group */}
-        <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map(item => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton>
-                    <Link href={item.url} className="flex items-center gap-2">
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-        {/* First Sidebar Contents Group */}
+        {/* Advance Collapse Menu Actions */}
+        <Collapsible defaultOpen className="group/collapsible">
+          <SidebarGroup>
+            <SidebarGroupLabel>
+              <CollapsibleTrigger className="flex items-center gap-2 w-full p-y-3">
+                <span>View All Projects</span>
+                <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
+              </CollapsibleTrigger>
+            </SidebarGroupLabel>
+            <CollapsibleContent>
+              <SidebarGroupContent>
+                <SidebarMenu>
+                  <SidebarMenuItem>
+                    <SidebarMenuButton>
+                      <Link href="#" className="flex items-center gap-2">
+                        <Projector />
+                        <span>Event Planner</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                  <SidebarMenuItem>
+                    <SidebarMenuButton>
+                      <Link href="#" className="flex items-center gap-2">
+                        <MoveIcon />
+                        <span>Movie Hub</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                  <SidebarMenuItem>
+                    <SidebarMenuButton>
+                      <Link href="#" className="flex items-center gap-2">
+                        <Scale />
+                        <span>Budget Planner</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </CollapsibleContent>
+          </SidebarGroup>
+        </Collapsible>
+        {/* Advance Collapse Menu Actions */}
       </SidebarContent>
-
       {/* Sidebar Footer Contents */}
       <SidebarFooter>
         <SidebarMenu>
