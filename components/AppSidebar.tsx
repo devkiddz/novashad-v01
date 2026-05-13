@@ -66,6 +66,45 @@ export default function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
         {/* First Sidebar Contents Group */}
+
+        {/* First Sidebar Contents Group */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map(item => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton>
+                    <Link href={item.url} className="flex items-center gap-2">
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        {/* First Sidebar Contents Group */}
+        {/* First Sidebar Contents Group */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map(item => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton>
+                    <Link href={item.url} className="flex items-center gap-2">
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        {/* First Sidebar Contents Group */}
       </SidebarContent>
       <SidebarFooter></SidebarFooter>
     </Sidebar>
