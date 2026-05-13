@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard UI
 
-## Getting Started
+A modern dashboard interface built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
 
-First, run the development server:
+This project focuses on building clean layouts, reusable components, responsive design systems, and scalable frontend architecture using modern React tools.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Modern dashboard layout
+- Responsive sidebar and navigation
+- Reusable UI components
+- Clean folder structure
+- Theme-ready styling
+- Scalable architecture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Purpose
 
-## Deploy on Vercel
+This project is part of my frontend development journey focused on improving my skills in:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Building production-style dashboard interfaces
+- Creating reusable component systems
+- Working with modern frontend tooling
+- Structuring scalable applications
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Future Improvements
+
+- Authentication system
+- Dark mode support
+- Charts and analytics
+- API integration
+- Dynamic data handling
+- Advanced dashboard widgets
+
+---
+
+## Status
+
+Currently in active development 🚀
