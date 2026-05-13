@@ -47,6 +47,7 @@ export default function AppSidebar() {
     <Sidebar>
       <SidebarHeader></SidebarHeader>
       <SidebarContent>
+        {/* First Sidebar Contents Group */}
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -54,7 +55,7 @@ export default function AppSidebar() {
               {items.map(item => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton>
-                    <Link href={item.url}>
+                    <Link href={item.url} className="flex items-center gap-2">
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
@@ -64,6 +65,7 @@ export default function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+        {/* First Sidebar Contents Group */}
       </SidebarContent>
       <SidebarFooter></SidebarFooter>
     </Sidebar>
