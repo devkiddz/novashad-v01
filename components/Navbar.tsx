@@ -15,6 +15,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
+import { SidebarTrigger } from './ui/sidebar';
 
 export default function Navbar() {
   const { setTheme } = useTheme();
@@ -22,7 +23,7 @@ export default function Navbar() {
   return (
     <nav className="p-4 flex items-center justify-between">
       {/* Left Details */}
-      <div>CollapseButton</div>
+      <SidebarTrigger />
       {/* Right Details */}
 
       {/* USER MENU */}
