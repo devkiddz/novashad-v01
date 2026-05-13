@@ -25,7 +25,7 @@ export default function Navbar() {
         {/* User's drop down options menu with avatar */}
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <Avatar className="cursor-pointer">
+            <Avatar>
               <AvatarImage src="https://avatars.githubusercontent.com/u/56824782?v=4" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
