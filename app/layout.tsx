@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import AppSidebar from '@/components/AppSidebar';
 import Navbar from '@/components/Navbar';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
@@ -42,12 +43,14 @@ export default function RootLayout({
       suppressHydrationWarning>
       <body className="min-h-full flex">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <AppSidebar />
+          <SidebarProvider>
+            <AppSidebar />
 
-          <main className="w-full">
-            <Navbar />
-            <div className="px-4">{children}</div>
-          </main>
+            <main className="w-full">
+              <Navbar />
+              <div className="px-4">{children}</div>
+            </main>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>
