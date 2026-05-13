@@ -1,3 +1,4 @@
+import AppAreaChart from '@/components/AppAreaChart';
 import AppBarchart from '@/components/AppBarChart';
 import { Maname } from 'next/font/google';
 import Image from 'next/image';
@@ -12,7 +13,7 @@ export default function Home() {
       <div className="bg-primary-foreground p-4 rounded-lg">Hello, Next.js!</div>
       <div className="bg-primary-foreground p-4 rounded-lg">Hello, Next.js!</div>
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2">
-        Hello, Next.js!
+        <AppAreaChart />
       </div>
       <div className="bg-primary-foreground p-4 rounded-lg">Hello, Next.js!</div>
     </div>

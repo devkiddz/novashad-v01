@@ -1,17 +1,24 @@
 'use client';
 import React from 'react';
 
-import { ChartContainer, type ChartConfig } from '@/components/ui/chart';
-import { BarChart, Bar, CartesianGrid } from 'recharts';
+import {
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartTooltip,
+  ChartTooltipContent,
+  type ChartConfig
+} from '@/components/ui/chart';
+import { BarChart, Bar, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 const chartConfig = {
   desktop: {
     label: 'Desktop',
-    color: '#2563eb'
+    color: '#1448E7'
   },
   mobile: {
     label: 'Mobile',
-    color: '#60a5fa'
+    color: '#AD45FF'
   }
 } satisfies ChartConfig;
 
@@ -27,12 +34,22 @@ const chartData = [
 export default function AppBarchart() {
   return (
     <div>
-      <h1> Total Revenue </h1>
+      <h1 className="text-lg font-medium mb-6 ml-6"> Total Revenue </h1>
       <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
         <BarChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
+          <XAxis
+            dataKey="month"
+            tickLine={false}
+            tickMargin={10}
+            axisLine={false}
+            tickFormatter={value => value.slice(0, 3)}
+          />
+          <YAxis tickLine={false} tickMargin={10} axisLine={false} />
           <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
           <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+          <ChartTooltip content={<ChartTooltipContent />} />
+          <ChartLegend content={<ChartLegendContent />} />
         </BarChart>
       </ChartContainer>
     </div>

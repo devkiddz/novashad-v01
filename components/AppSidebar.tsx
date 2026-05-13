@@ -94,7 +94,9 @@ export default function AppSidebar() {
                     </Link>
                   </SidebarMenuButton>
                   {item.title === 'Inbox' && (
-                    <SidebarMenuBadge className="text-shadow-green-600 bg-green-900">25</SidebarMenuBadge>
+                    <SidebarMenuBadge className="text-blue-100 bg-blue-800 ring-1 ring-blue-100">
+                      9
+                    </SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
               ))}
