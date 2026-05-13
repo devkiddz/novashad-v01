@@ -1,6 +1,5 @@
 import React from 'react';
-import { Calendar, Group, Home, Inbox, Search, Settings } from 'lucide-react';
-import { User } from 'lucide-react';
+import { Calendar, Home, Inbox, Search, Settings } from 'lucide-react';
 import {
   Sidebar,
   SidebarContent,
