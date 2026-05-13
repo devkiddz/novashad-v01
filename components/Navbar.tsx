@@ -1,7 +1,7 @@
 import { Group, LogOut, Moon, Settings, User } from 'lucide-react';
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
+//import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,7 +24,7 @@ export default function Navbar() {
 
         {/* User's drop down options menu with avatar */}
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
+          <DropdownMenuTrigger>
             <Avatar className="cursor-pointer">
               <AvatarImage src="https://avatars.githubusercontent.com/u/56824782?v=4" />
               <AvatarFallback>CN</AvatarFallback>
