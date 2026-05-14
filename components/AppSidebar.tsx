@@ -68,10 +68,10 @@ export default function AppSidebar() {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild>
+            <SidebarMenuButton>
               <Link href="/" className="flex items-center gap-2">
                 <Image src="/logo.png" alt="NovaPanel" width={32} height={32} className="rounded-full" />
-                <span>NovaPanel</span>
+                <>NovaPanel</>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
