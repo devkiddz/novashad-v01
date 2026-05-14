@@ -14,11 +14,11 @@ import { CartesianGrid, XAxis, YAxis, AreaChart, Area } from 'recharts';
 const chartConfig = {
   desktop: {
     label: 'Desktop',
-    color: '#3B82F6' // clean system blue (primary)
+    color: 'var(--chart-3)' // clean system blue (primary)
   },
   mobile: {
     label: 'Mobile',
-    color: '#8B5CF6' // softened purple (secondary)
+    color: 'var(--chart-4)' // softened purple (secondary)
   }
 } satisfies ChartConfig;
 const chartData = [
