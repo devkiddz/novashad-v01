@@ -7,17 +7,6 @@ import { Badge } from './ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import Link from 'next/link';
 
-const skillColors: Record<string, string> = {
-  'Next.js': 'border-white/10 bg-white/5 text-white',
-  React: 'border-cyan-500/20 bg-cyan-500/10 text-cyan-400',
-  TypeScript: 'border-blue-500/20 bg-blue-500/10 text-blue-400',
-  'Tailwind CSS': 'border-sky-500/20 bg-sky-500/10 text-sky-400',
-  'shadcn/ui': 'border-zinc-500/20 bg-zinc-500/10 text-zinc-300',
-  'React Hook Form': 'border-pink-500/20 bg-pink-500/10 text-pink-400',
-  Zod: 'border-violet-500/20 bg-violet-500/10 text-violet-400',
-  Recharts: 'border-emerald-500/20 bg-emerald-500/10 text-emerald-400'
-};
-
 export default function AccountDetails() {
   return (
     <div className="flex flex-col gap-4">

@@ -35,7 +35,7 @@ export default function AppBarchart() {
   return (
     <div>
       <h1 className="text-lg font-medium mb-6 ml-6"> Total Revenue </h1>
-      <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+      <ChartContainer config={chartConfig} className="min-h-62.5 w-full">
         <BarChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
           <XAxis
