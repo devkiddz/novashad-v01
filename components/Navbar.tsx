@@ -64,7 +64,7 @@ export default function Navbar() {
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuItem className="cursor-pointer">
                 <User className="w-[1.2rem] h-[1.2rem] mr-2" />
-                Profile
+                <Link href="/users/profile">Profile </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
                 <Group className="w-[1.2rem] h-[1.2rem] mr-2" />

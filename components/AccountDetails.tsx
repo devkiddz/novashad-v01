@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 import { Badge } from './ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import Link from 'next/link';
 
 const skillColors: Record<string, string> = {
   'Next.js': 'border-white/10 bg-white/5 text-white',
@@ -38,9 +39,13 @@ export default function AccountDetails() {
 
             {user.skills && (
               <div className="flex flex-wrap gap-2">
-                {user.skills.map((skill, index) => (
-                  <Badge key={index} variant="outline" className={skillColors[skill]}>
-                    {skill}
+                {user.skills?.map((skill, index) => (
+                  <Badge
+                    key={index}
+                    variant="outline"
+                    className="ring ring-white/10 rounded-full border-white/10 bg-white/5 text-white p-3">
+                    <img src={skill.logo} alt={skill.repo} className="size-4 object-cover rounded-full" />
+                    <Link href={skill.link}>{skill.repo}</Link>
                   </Badge>
                 ))}
               </div>
