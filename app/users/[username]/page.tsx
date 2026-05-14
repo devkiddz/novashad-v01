@@ -14,12 +14,13 @@ import { BadgeCheck, Candy, Citrus, Shield } from 'lucide-react';
 import { Sheet, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import EditUser from '@/components/EditUser';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import AppLineChart from '@/components/AppLineChart';
+import TodoList from '@/components/TodoList';
+import AccountDetails from '@/components/AccountDetails';
 
 const SingleUserPage = () => {
   return (
-    <div className="">
+    <div className="space-y-6">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -31,27 +32,27 @@ const SingleUserPage = () => {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>John Doe</BreadcrumbPage>
+            <BreadcrumbPage>Dev Kiddz</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
       {/* CONTAINER */}
-      <div className="mt-4 flex flex-col xl:flex-row gap-8">
+      <div className="mt-4 flex flex-col xl:flex-row gap-8 space-y-6">
         {/* LEFT */}
         <div className="w-full xl:w-1/3 space-y-6">
-          {/* USER BADGES CONTAINER */}
+          {/* Earned Badges CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <h1 className="text-xl font-semibold">User Badges</h1>
+            <h1 className="text-md font-semibold">Earned Badges</h1>
             <div className="flex gap-4 mt-4">
               <HoverCard>
                 <HoverCardTrigger>
                   <BadgeCheck
                     size={36}
-                    className="rounded-full bg-blue-500/30 border-1 border-blue-500/50 p-2"
+                    className="ring ring-white/10 rounded-full border-white/10 bg-white/5 text-white p-2"
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <h1 className="font-bold mb-2">Verified User</h1>
+                  <h1 className="font-normal text-md mb-2">Verified User</h1>
                   <p className="text-sm text-muted-foreground">This user has been verified by the admin.</p>
                 </HoverCardContent>
               </HoverCard>
@@ -59,11 +60,11 @@ const SingleUserPage = () => {
                 <HoverCardTrigger>
                   <Shield
                     size={36}
-                    className="rounded-full bg-green-800/30 border-1 border-green-800/50 p-2"
+                    className="ring ring-white/10 rounded-full border-white/10 bg-white/5 text-white p-2"
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <h1 className="font-bold mb-2">Admin</h1>
+                  <h1 className="font-normal text-md mb-2">Admin</h1>
                   <p className="text-sm text-muted-foreground">
                     Admin users have access to all features and can manage users.
                   </p>
@@ -73,11 +74,11 @@ const SingleUserPage = () => {
                 <HoverCardTrigger>
                   <Candy
                     size={36}
-                    className="rounded-full bg-yellow-500/30 border-1 border-yellow-500/50 p-2"
+                    className="ring ring-white/10 rounded-full border-white/10 bg-white/5 text-white p-2"
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <h1 className="font-bold mb-2">Awarded</h1>
+                  <h1 className="font-normal text-md mb-2">Awarded</h1>
                   <p className="text-sm text-muted-foreground">
                     This user has been awarded for their contributions.
                   </p>
@@ -87,11 +88,11 @@ const SingleUserPage = () => {
                 <HoverCardTrigger>
                   <Citrus
                     size={36}
-                    className="rounded-full bg-orange-500/30 border-1 border-orange-500/50 p-2"
+                    className="ring ring-white/10 rounded-full border-white/10 bg-white/5 text-white p-2"
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <h1 className="font-bold mb-2">Popular</h1>
+                  <h1 className="font-normal text-md mb-2">Popular</h1>
                   <p className="text-sm text-muted-foreground">
                     This user has been popular in the community.
                   </p>
@@ -102,7 +103,7 @@ const SingleUserPage = () => {
           {/* INFORMATION CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <div className="flex items-center justify-between">
-              <h1 className="text-xl font-semibold">User Information</h1>
+              <h1 className="text-md font-normal">Account Information</h1>
               <Sheet>
                 <SheetTrigger>
                   <Button>Edit User</Button>
@@ -116,23 +117,23 @@ const SingleUserPage = () => {
                 <Progress value={66} />
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Username:</span>
-                <span>john.doe</span>
+                <span className="font-normal text-md">Account Name:</span>
+                <span>dev.kiddz</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Email:</span>
-                <span>john.doe@gmail.com</span>
+                <span className="font-normal text-md">Email:</span>
+                <span>dev.kiddz@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Phone:</span>
+                <span className="font-normal text-md">Phone:</span>
                 <span>+1 234 5678</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Location:</span>
+                <span className="font-normal text-md">Location:</span>
                 <span>New York, NY</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Role:</span>
+                <span className="font-normal text-md">Role:</span>
                 <Badge>Admin</Badge>
               </div>
             </div>
@@ -140,29 +141,17 @@ const SingleUserPage = () => {
           </div>
           {/* CARD LIST CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <CardList title="Recent Transactions" />
+            <TodoList />
           </div>
         </div>
         {/* RIGHT */}
         <div className="w-full xl:w-2/3 space-y-6">
           {/* USER CARD CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
-            <div className="flex items-center gap-2">
-              <Avatar className="size-12">
-                <AvatarImage src="https://avatars.githubusercontent.com/u/1486366" />
-                <AvatarFallback>JD</AvatarFallback>
-              </Avatar>
-              <h1 className="text-xl font-semibold">John Doe</h1>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel voluptas distinctio ab ipsa
-              commodi fugiat labore quos veritatis cum corrupti sed repudiandae ipsum, harum recusandae
-              ratione ipsam in, quis quia.
-            </p>
-          </div>
+          <AccountDetails />
+
           {/* CHART CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <h1 className="text-xl font-semibold">User Activity</h1>
+            <h1 className="text-md font-semibold">Activity Tracker</h1>
             <AppLineChart />
           </div>
         </div>

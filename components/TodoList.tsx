@@ -169,7 +169,7 @@ const TodoList = () => {
         </Popover>
       </div>
       {/* LIST */}
-      <ScrollArea className="max-h-[400px] mt-4 overflow-y-auto">
+      <ScrollArea className="max-h-\[400px\] {max-height: 400px; mt-4 overflow-y-auto">
         <div className="flex flex-col gap-4 p-2">
           {/* LIST ITEM */}
           {programmingTodos.map(todo => (
