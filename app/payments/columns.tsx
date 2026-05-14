@@ -27,18 +27,13 @@ export const columns: ColumnDef<Payment>[] = [
     id: 'select',
     header: ({ table }) => (
       <Checkbox
-        // This is line 31 from your error message!
-        // checked={table.getIsAllPageRowsSelected() || (table.getIsSomePageRowsSelected() && 'indeterminate')}
+        checked={table.getIsAllPageRowsSelected()}
         onCheckedChange={value => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
       />
     ),
+
     cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={value => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
+      <Checkbox checked={row.getIsSelected()} onCheckedChange={value => row.toggleSelected(!!value)} />
     )
   },
   {
