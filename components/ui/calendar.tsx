@@ -73,11 +73,11 @@ function Calendar({
           defaultClassNames.caption_label
         ),
         // table: "w-full border-collapse",
-        weekdays: cn('flex', defaultClassNames.weekdays),
-        weekday: cn(
-          'flex-1 rounded-(--cell-radius) text-[0.8rem] font-normal text-muted-foreground select-none',
-          defaultClassNames.weekday
-        ),
+        // weekdays: cn('flex', defaultClassNames.weekdays),
+        // weekday: cn(
+        //   'flex-1 rounded-(--cell-radius) text-[0.8rem] font-normal text-muted-foreground select-none',
+        //   defaultClassNames.weekday
+        // ),
         week: cn('mt-2 flex w-full', defaultClassNames.week),
         week_number_header: cn('w-(--cell-size) select-none', defaultClassNames.week_number_header),
         week_number: cn('text-[0.8rem] text-muted-foreground select-none', defaultClassNames.week_number),
