@@ -104,7 +104,7 @@ const SingleUserPage = () => {
             <div className="flex items-center justify-between">
               <h1 className="text-xl font-semibold">User Information</h1>
               <Sheet>
-                <SheetTrigger asChild>
+                <SheetTrigger>
                   <Button>Edit User</Button>
                 </SheetTrigger>
                 <EditUser />
