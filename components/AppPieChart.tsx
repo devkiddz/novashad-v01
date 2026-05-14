@@ -12,23 +12,23 @@ const chartConfig = {
   },
   chrome: {
     label: 'Chrome',
-    color: '#02BB7C'
+    color: '#22C55E' // soft modern green (primary success tone)
   },
   safari: {
     label: 'Safari',
-    color: '#FC9B00'
+    color: '#F59E0B' // warm amber (balanced highlight)
   },
   firefox: {
     label: 'Firefox',
-    color: '#AD46FD'
+    color: '#A855F7' // softened purple (less neon, more premium)
   },
   edge: {
     label: 'Edge',
-    color: '#FE2156'
+    color: '#EF4444' // controlled red (not neon pinkish)
   },
   other: {
     label: 'Other',
-    color: '#1448E7'
+    color: '#3B82F6' // clean blue (neutral tech tone)
   }
 } satisfies ChartConfig;
 

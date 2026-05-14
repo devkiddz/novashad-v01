@@ -14,14 +14,13 @@ import { CartesianGrid, XAxis, YAxis, AreaChart, Area } from 'recharts';
 const chartConfig = {
   desktop: {
     label: 'Desktop',
-    color: '#1448E7'
+    color: '#3B82F6' // clean system blue (primary)
   },
   mobile: {
     label: 'Mobile',
-    color: '#AD46FD'
+    color: '#8B5CF6' // softened purple (secondary)
   }
 } satisfies ChartConfig;
-
 const chartData = [
   { month: 'January', desktop: 186, mobile: 80 },
   { month: 'February', desktop: 305, mobile: 200 },
