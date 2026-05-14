@@ -25,16 +25,7 @@ export type Payment = {
 export const columns: ColumnDef<Payment>[] = [
   {
     id: 'select',
-    header: ({ table }) => (
-      <Checkbox
-        checked={table.getIsAllPageRowsSelected()}
-        onCheckedChange={value => table.toggleAllPageRowsSelected(!!value)}
-      />
-    ),
-
-    cell: ({ row }) => (
-      <Checkbox checked={row.getIsSelected()} onCheckedChange={value => row.toggleSelected(!!value)} />
-    )
+    header: 'select'
   },
   {
     accessorKey: 'username',
