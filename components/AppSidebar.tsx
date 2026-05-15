@@ -7,12 +7,14 @@ import {
   ChevronUp,
   Home,
   Inbox,
+  LogOut,
   MoveIcon,
   Plus,
   Projector,
   Scale,
   Search,
   Settings,
+  User,
   User2
 } from 'lucide-react';
 import {
@@ -162,9 +164,19 @@ export default function AppSidebar() {
               </DropdownMenuTrigger>
 
               <DropdownMenuContent>
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Settings</DropdownMenuItem>
-                <DropdownMenuItem>Signout</DropdownMenuItem>
+                <DropdownMenuItem>
+                  <User className="w-[1.2rem] h-[1.2rem] mr-2" />
+                  <Link href="/users/profile">Profile </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Settings className="w-[1.2rem] h-[1.2rem] mr-2" />
+                  <Link href="#">Settings </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  {' '}
+                  <LogOut className="w-[1.2rem] h-[1.2rem] mr-2" />
+                  <Link href="#">Logout! </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
