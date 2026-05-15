@@ -126,7 +126,7 @@ export const columns: ColumnDef<Payment>[] = [
 
       return (
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
+          <DropdownMenuTrigger>
             <Button variant="ghost" className="h-8 w-8 p-0 hover:bg-accent/50">
               <span className="sr-only">Open menu</span>
 

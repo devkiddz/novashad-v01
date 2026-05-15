@@ -32,7 +32,7 @@ export default function AccountDetails() {
                   <Badge
                     key={index}
                     variant="outline"
-                    className="ring ring-white/10 rounded-full border-white/10 bg-white/5 text-white p-3">
+                    className="ring ring-white/10 rounded-full border-[#EDEDED] bg-[#000000] text-white p-3">
                     <img src={skill.logo} alt={skill.repo} className="size-4 object-cover rounded-full" />
                     <Link href={skill.link}>{skill.repo}</Link>
                   </Badge>

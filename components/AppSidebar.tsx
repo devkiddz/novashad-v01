@@ -153,12 +153,14 @@ export default function AppSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
-              <DropdownMenuTrigger>
+              <DropdownMenuTrigger className="w-full">
                 <SidebarMenuButton className="w-full">
-                  <User2 /> <span className="text-white font-bold">Dev</span>Kiddz
+                  <User2 />
+                  <span className="text-white font-bold">Dev</span>Kiddz
                   <ChevronUp className="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
+
               <DropdownMenuContent>
                 <DropdownMenuItem>Profile</DropdownMenuItem>
                 <DropdownMenuItem>Settings</DropdownMenuItem>
